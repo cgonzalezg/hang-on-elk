@@ -1,0 +1,11 @@
+{
+  "aggs" : {
+    "top_ips" : {
+      "terms" : {
+        "field" : "clientip",
+        "size" : 3,
+        "exclude" : "<HQ_IP>" 
+      }
+    }
+  }
+}

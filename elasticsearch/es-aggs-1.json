@@ -1,0 +1,10 @@
+{
+  "aggs" : {
+    "top_ips" : {
+      "terms" : {
+        "field" : "clientip",
+        "size" : 3
+     }
+    }
+  }
+}
