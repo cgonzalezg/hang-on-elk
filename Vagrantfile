@@ -39,7 +39,8 @@ Vagrant.configure(2) do |config|
   # argument is a set of non-required options.
   config.vm.synced_folder "./elasticsearch", "/elasticsearch"
   config.vm.synced_folder "./logstash", "/logstash"
-
+  config.vm.provision :shell, inline: 'wget --no-check-certificate https://github.com/aglover/ubuntu-equip/raw/master/equip_java7_64.sh && bash equip_java7_64.sh'
+  #https://github.com/aglover/ubuntu-equip/raw/master/equip_java7_64.sh
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
